@@ -142,7 +142,7 @@
 	display_name = "skirt, purple"
 	path = /obj/item/clothing/under/dress/skirt/purple
 
-/datum/gear/uniform/skirt/red
+/datum/gear/uniform/dress/skirt/red
 	display_name = "skirt, red"
 	path = /obj/item/clothing/under/dress/skirt/red
 
