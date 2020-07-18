@@ -198,7 +198,11 @@ GLOBAL_LIST_INIT(department_radio_keys, list(
 		spans |= L.spans
 
 	if(message_mode == MODE_SING)
+	#if DM_VERSION < 513
+		var/randomnote = "~"
+	#else
 		var/randomnote = pick("\u2669", "\u266A", "\u266B")
+	#endif
 		spans |= SPAN_SINGING
 		message = "[randomnote] [message] [randomnote]"
 
@@ -408,7 +412,7 @@ GLOBAL_LIST_INIT(department_radio_keys, list(
 				return ITALICS | REDUCE_RANGE
 
 		if(MODE_INTERCOM)
-			for (var/obj/item/radio/intercom/I in view(MODE_RANGE_INTERCOM, null))
+			for (var/obj/item/radio/intercom/I in view(1, null))
 				I.talk_into(src, message, , spans, language)
 			return ITALICS | REDUCE_RANGE
 

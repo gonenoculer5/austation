@@ -301,15 +301,15 @@
 	..()
 	if(statpanel("Status"))
 		if(cell)
-			stat(null, "Charge Left: [cell.charge]/[cell.maxcharge]")
+			stat("Charge Left:", "[cell.charge]/[cell.maxcharge]")
 		else
 			stat(null, text("No Cell Inserted!"))
 
 		if(module)
 			for(var/datum/robot_energy_storage/st in module.storages)
-				stat(null, "[st.name]: [st.energy]/[st.max_energy]")
+				stat("[st.name]:", "[st.energy]/[st.max_energy]")
 		if(connected_ai)
-			stat(null, "Master AI: [connected_ai.name]")
+			stat("Master AI:", connected_ai.name)
 
 /mob/living/silicon/robot/restrained(ignore_grab)
 	. = 0
@@ -460,7 +460,6 @@
 			to_chat(user, "<span class='notice'>You start to unfasten [src]'s securing bolts...</span>")
 			if(W.use_tool(src, user, 50, volume=50) && !cell)
 				user.visible_message("[user] deconstructs [src]!", "<span class='notice'>You unfasten the securing bolts, and [src] falls to pieces!</span>")
-				log_attack("[key_name(user)] deconstructed [name] at [AREACOORD(src)].")
 				deconstruct()
 
 	else if(istype(W, /obj/item/aiModule))

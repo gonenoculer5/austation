@@ -396,7 +396,6 @@
 /obj/item/paper/guides/antag/abductor
 	name = "Dissection Guide"
 	icon_state = "alienpaper_words"
-	show_written_words = FALSE
 	info = {"<b>Dissection for Dummies</b><br>
 
 <br>
