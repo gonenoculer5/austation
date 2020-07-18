@@ -49,11 +49,6 @@ Include = @
 Exclude =
 Edit =
 
-Name = Head-Moderator
-Include = EVERYTHING
-Exclude =
-Edit = EVERYTHING
-
 Name = Trial Admin
 Include = @ SPAWN VAREDIT BAN
 Exclude =
@@ -79,7 +74,7 @@ Include = EVERYTHING
 Exclude = AUTOADMIN
 Edit = EVERYTHING
 
-Name = Owner
+Name = Host
 Include = EVERYTHING
 Exclude =
 Edit = EVERYTHING
@@ -103,10 +98,3 @@ Name = CouncilMember
 Include = EVERYTHING
 Exclude =
 Edit = EVERYTHING
-
-Name = Head-Maintainer
-Include = ADMIN DEBUG SERVER SOUND VAREDIT SPAWN FUN
-Exclude =
-Edit =
-
-##Maintainer admin is for extra tools for maintaining the server, not for doing actual admin things.
